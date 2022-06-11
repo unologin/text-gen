@@ -114,13 +114,34 @@ function evalTokens(
       path.resolve(pwd, p),
       importer,
     ),
+    loadRaw: (p: string) => importer(path.resolve(pwd, p)),
   };
 
   vm.createContext(context);
 
   text.forEach((t, i) => 
   {
-    result += t;
+    // if a text block after a code block starts with a line break
+    if (
+      i > 0 && 
+      (t.startsWith('\n') || t.startsWith('\r'))
+    )
+    {
+      // remove \r\n
+      if (t.length >= 2 && t.charAt(0) == '\r' && t.charAt(1) == '\n')
+      {
+        result += t.substr(2, t.length);
+      }
+      // remove single \r or \n
+      else 
+      {
+        result += t.substr(1, t.length);
+      }
+    }
+    else 
+    {
+      result += t;
+    }
 
     if (i < text.length - 1)
     {

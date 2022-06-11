@@ -3,4 +3,5 @@
 
 yarn test
 yarn build
-git add lib/
+yarn writeme
+git add lib/ README.md

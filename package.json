@@ -1,6 +1,6 @@
 {
   "name": "node-text-gen",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "node-text-gen - generate next gen text with node",
   "main": "lib/main.js",
   "files": [
@@ -9,7 +9,8 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "lint": "npx eslint --ext .ts ./src/ ./test/ --fix"
+    "lint": "npx eslint --ext .ts ./src/ ./test/ --fix",
+    "writeme": "node -e \"console.log(require('.').default('examples/README.src.md', { process }))\" > README.md"
   },
   "repository": {
     "type": "git",
