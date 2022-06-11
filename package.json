@@ -1,7 +1,7 @@
 {
-  "name": "text-gen",
+  "name": "node-text-gen",
   "version": "0.0.1",
-  "description": "text-gen - generate next gen text",
+  "description": "node-text-gen - generate next gen text with node",
   "main": "lib/main.js",
   "files": [
     "lib/**/*"
