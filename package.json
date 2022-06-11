@@ -1,0 +1,39 @@
+{
+  "name": "text-gen",
+  "version": "0.0.1",
+  "description": "text-gen - generate next gen text",
+  "main": "lib/main.js",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "lint": "npx eslint --ext .ts ./src/ ./test/ --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unologin/text-gen.git"
+  },
+  "keywords": [],
+  "author": "Adrian Kriegel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/unologin/text-gen/issues"
+  },
+  "homepage": "https://github.com/unologin/text-gen#readme",
+  "devDependencies": {
+    "@types/jest": "^28.1.1",
+    "@types/json-schema": "^7.0.7",
+    "@typescript-eslint/eslint-plugin": "^4.28.1",
+    "@unologin/eslint-config": "^1.1.0",
+    "eslint": "^7.21.0",
+    "husky": "^8.0.1",
+    "jest": "^28.1.1",
+    "ts-jest": "^28.0.4",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.6.2"
+  },
+  "peerDependencies": {},
+  "dependencies": {}
+}
